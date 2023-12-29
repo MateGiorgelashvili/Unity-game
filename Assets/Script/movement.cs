@@ -21,7 +21,9 @@ public class movement : MonoBehaviour
         float movementInput = Input.GetAxisRaw("Horizontal");
         Vector2 jump = new Vector2(0, jumpForce * 100);
 
-        transform.Translate(movementInput * Time.deltaTime * moveSpeed, 0, 0);
+        Vector2 movement = new Vector2(movementInput * moveSpeed, 0);
+        rb.AddForce(movement);
+        rb.drag = 6.0f;
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
