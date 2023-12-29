@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 15683568}
   m_Layer: 6
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 75935712}
   m_Layer: 0
   m_Name: barrier_dva
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 393976414}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,8 +878,8 @@ GameObject:
   - component: {fileID: 732366877}
   - component: {fileID: 732366876}
   - component: {fileID: 732366881}
-  - component: {fileID: 732366880}
   - component: {fileID: 732366879}
+  - component: {fileID: 732366882}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1000,9 +1000,28 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!60 &732366880
+--- !u!114 &732366881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732366875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f1551df01871c4d9988a03b2f8dcbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  jumpForce: 3
+  boxSize: {x: 1, y: 0.2}
+  castDistance: 0.65
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!60 &732366882
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1046,37 +1065,63 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.114334166, y: 0.48551852}
-      - {x: -0.23958734, y: 0.33841714}
-      - {x: -0.37858844, y: -0.13193774}
-      - {x: -0.2558207, y: -0.4096673}
-      - {x: -0.048230186, y: -0.41003}
-      - {x: 0.22257963, y: -0.41098458}
-      - {x: 0.25061145, y: -0.34871933}
-      - {x: 0.41565138, y: -0.20426859}
-      - {x: 0.3033433, y: 0.19015504}
-      - {x: 0.26771903, y: 0.41318223}
-      - {x: 0.17937423, y: 0.48069137}
+    - - {x: -0.094537556, y: 0.46795154}
+      - {x: -0.09487723, y: 0.4382921}
+      - {x: -0.12593532, y: 0.43706226}
+      - {x: -0.1272211, y: 0.40737557}
+      - {x: -0.15499854, y: 0.40671352}
+      - {x: -0.15783095, y: 0.37478915}
+      - {x: -0.18930812, y: 0.3762054}
+      - {x: -0.19163044, y: 0.31400695}
+      - {x: -0.22417414, y: 0.31159204}
+      - {x: -0.22071482, y: 0.09296319}
+      - {x: -0.1896029, y: 0.08550727}
+      - {x: -0.18899845, y: 0.06354935}
+      - {x: -0.2542665, y: 0.06815518}
+      - {x: -0.2562594, y: 0.031706445}
+      - {x: -0.28315583, y: 0.036727123}
+      - {x: -0.28482, y: 0.0036470965}
+      - {x: -0.31790996, y: 0.0029927138}
+      - {x: -0.31683087, y: -0.062256977}
+      - {x: -0.34678048, y: -0.06306718}
+      - {x: -0.34748045, y: -0.12127569}
+      - {x: -0.3754555, y: -0.12563801}
+      - {x: -0.3751991, y: -0.22149631}
+      - {x: -0.3146074, y: -0.22189814}
+      - {x: -0.31454322, y: -0.2510995}
+      - {x: -0.2516812, y: -0.25510293}
+      - {x: -0.25163603, y: -0.40958822}
+      - {x: -0.122662246, y: -0.40852502}
+      - {x: -0.12317191, y: -0.376358}
+      - {x: -0.092432745, y: -0.3743596}
+      - {x: -0.08877765, y: -0.31487852}
+      - {x: 0.090604275, y: -0.31751785}
+      - {x: 0.09387398, y: -0.40895236}
+      - {x: 0.221017, y: -0.40846545}
+      - {x: 0.22146492, y: -0.3457832}
+      - {x: 0.25065634, y: -0.34466025}
+      - {x: 0.2518476, y: -0.25320318}
+      - {x: 0.3777713, y: -0.252813}
+      - {x: 0.37662354, y: -0.22000144}
+      - {x: 0.4051583, y: -0.22331068}
+      - {x: 0.40646172, y: -0.18487494}
+      - {x: 0.3745336, y: -0.18293156}
+      - {x: 0.37866914, y: -0.062164556}
+      - {x: 0.3441327, y: -0.06055453}
+      - {x: 0.34576264, y: -0.03053385}
+      - {x: 0.31340304, y: -0.02900306}
+      - {x: 0.3156335, y: 0.0038376953}
+      - {x: 0.25134885, y: 0.001599367}
+      - {x: 0.25277713, y: 0.06139236}
+      - {x: 0.28237176, y: 0.06192702}
+      - {x: 0.28209785, y: 0.3126346}
+      - {x: 0.24986872, y: 0.31403458}
+      - {x: 0.24930997, y: 0.40613395}
+      - {x: 0.21932337, y: 0.4060952}
+      - {x: 0.21817476, y: 0.43786478}
+      - {x: 0.1571511, y: 0.4379132}
+      - {x: 0.15698396, y: 0.46973202}
   m_UseDelaunayMesh: 0
---- !u!114 &732366881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732366875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f1551df01871c4d9988a03b2f8dcbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  jumpForce: 3
-  boxSize: {x: 1, y: 0.2}
-  castDistance: 0.7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &1631014715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1136,7 @@ GameObject:
   - component: {fileID: 1631014719}
   m_Layer: 0
   m_Name: fallpoint
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1310,7 +1355,7 @@ GameObject:
   - component: {fileID: 1868497908}
   m_Layer: 0
   m_Name: barrier
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
