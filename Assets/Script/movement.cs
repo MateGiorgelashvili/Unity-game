@@ -10,6 +10,8 @@ public class movement : MonoBehaviour
     public Vector2 boxSize = new Vector2(1, 0.2f);
     public float castDistance = 1;
     public LayerMask groundLayer;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
