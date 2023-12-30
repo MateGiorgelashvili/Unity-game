@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class trap : MonoBehaviour
@@ -17,11 +18,16 @@ public class trap : MonoBehaviour
         GameObject.Destroy(trap1);
         GameObject.Destroy(snowDisapear);
         Invoke("batoninika", 0.8f);
-
+        Invoke("sceneSwitch", 4.5f);
     }
 
     void batoninika()
     {
         audioSource.Play();
+    }
+
+    void sceneSwitch()
+    {
+        SceneManager.LoadScene(1);
     }
 }
