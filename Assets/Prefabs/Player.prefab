@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  jumpForce: 3
+  jumpForce: 2.6
   boxSize: {x: 1, y: 0.2}
   castDistance: 0.65
   groundLayer:
@@ -138,6 +138,7 @@ MonoBehaviour:
   groundLayer2:
     serializedVersion: 2
     m_Bits: 128
+  jumpsLeft: 2
 --- !u!50 &4130061686606683902
 Rigidbody2D:
   serializedVersion: 4
