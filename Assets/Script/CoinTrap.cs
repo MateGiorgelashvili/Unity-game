@@ -7,7 +7,12 @@ public class CoinTrap : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Invoke("die", 0.1f);
         }
+    }
+
+    void die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
