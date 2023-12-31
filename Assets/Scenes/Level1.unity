@@ -1346,8 +1346,16 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  maxJumps: 1
-  jumpsLeft: 0
+  boxSize1: {x: 0.13, y: 1.15}
+  castDistance1: 0.65
+  groundLayer1:
+    serializedVersion: 2
+    m_Bits: 128
+  boxSize2: {x: 0.13, y: 1.15}
+  castDistance2: 0.65
+  groundLayer2:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!95 &1100144237
 Animator:
   serializedVersion: 5
@@ -1410,7 +1418,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -471041343, guid: 24b55cb5a7e2c7e4d8a8921993d2fefb, type: 3}
+  m_Sprite: {fileID: 935734966, guid: 3705f8b6f84653b45ad0ce0246c16faa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1430,7 +1438,7 @@ Transform:
   m_GameObject: {fileID: 1100144233}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.53, y: -1.25, z: 0}
+  m_LocalPosition: {x: -7.79, y: -1.25, z: 0}
   m_LocalScale: {x: 1.6999999, y: 1.6999999, z: 1.6999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
