@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8822154108396120381}
   - component: {fileID: 4130061686606683902}
   - component: {fileID: 5627894985918186313}
+  - component: {fileID: -8381763508857589694}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  jumpForce: 2.6
+  jumpForce: 2.5
   boxSize: {x: 1, y: 0.2}
   castDistance: 0.65
   groundLayer:
@@ -243,3 +244,16 @@ PolygonCollider2D:
       - {x: 0.22073944, y: 0.4384496}
       - {x: 0.21983837, y: 0.46855474}
   m_UseDelaunayMesh: 0
+--- !u!114 &-8381763508857589694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958022599633753294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b983b5e85cdaee8479b845f83bafc8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anim: {fileID: 0}

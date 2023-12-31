@@ -3,11 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class CoinTrap : MonoBehaviour
 {
+
+    Animator Anim;
+
+    private void Start()
+    {
+        Anim = GetComponent<Animator>();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Coin"))
         {
-            Invoke("die", 0.1f);
+            Anim.Play("death");
+            
         }
     }
 

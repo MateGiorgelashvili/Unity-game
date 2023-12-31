@@ -64,8 +64,19 @@ public class movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && (isGrounded() || jumpsLeft > 0))
         {
+           
             jumpsLeft--;
-            rb.AddForce(jump);
+            if(jumpsLeft == 0)
+            {
+                Debug.Log("second jump!");
+                rb.AddForce(new Vector2(0, (jumpForce / 1.3f) * 100));
+            }
+            else
+            {
+                rb.AddForce(jump);
+            }
+            
+            
         }
         if (movementInput > 0 && !isFacingRight || movementInput < 0 && isFacingRight)
         {
