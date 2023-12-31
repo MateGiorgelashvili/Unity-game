@@ -19,7 +19,7 @@ void FollowTarget()
         return;
     }
 
-    Vector3 desiredPosition = target.position + offset;
+    Vector3 desiredPosition = new Vector3(target.position.x, -3f, -10) + offset;
     Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.fixedDeltaTime);
     transform.position = smoothedPosition;
 }
