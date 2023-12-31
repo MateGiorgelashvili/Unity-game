@@ -23,16 +23,18 @@ public class movement : MonoBehaviour
     private bool isFacingRight = true;
     Animator Anim;
 
+
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
     }
 
+
     // Update is called once per frame
     void Update()
     {
-
 
         float movementInput = Input.GetAxisRaw("Horizontal");
 
@@ -48,7 +50,11 @@ public class movement : MonoBehaviour
 
         if (movementInput != 0)
         {
-            Anim.Play("run");
+            Anim.SetBool("Run", true);
+        }
+        else
+        {
+            Anim.SetBool("Run", false);
         }
 
 
