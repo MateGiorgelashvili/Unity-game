@@ -23,7 +23,7 @@ public class movement : MonoBehaviour
     private bool isFacingRight = true;
     Animator Anim;
 
-
+    [SerializeField] int jumpsLeft = 2;
     
     void Start()
     {
@@ -62,8 +62,9 @@ public class movement : MonoBehaviour
 
         transform.Translate(movementInput * Time.deltaTime * moveSpeed, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded() || jumpsLeft > 0))
         {
+            jumpsLeft--;
             rb.AddForce(jump);
         }
         if (movementInput > 0 && !isFacingRight || movementInput < 0 && isFacingRight)
@@ -76,7 +77,7 @@ public class movement : MonoBehaviour
     {
         if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
         {
-            
+            jumpsLeft = 2;
             return true;
         }
         else
@@ -101,6 +102,7 @@ public class movement : MonoBehaviour
     {
         if (Physics2D.BoxCast(transform.position, boxSize2, 0, transform.right, castDistance2, groundLayer2))
         {
+
             return true;
         }
         else
