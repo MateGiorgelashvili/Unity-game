@@ -70,6 +70,7 @@ public class movement : MonoBehaviour
     {
         if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
         {
+            
             return true;
         }
         else
