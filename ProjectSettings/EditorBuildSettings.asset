@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Matrix.unity
     guid: 4c1059a9ccd973844b6ac9cc5aec0432
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 73cb0b51d900374448e9ecd18190736b
   m_configObjects: {}
