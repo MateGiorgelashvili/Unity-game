@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6eb636bdf516a3f4588f6950e7e853d4
+guid: 3d825c2dd2c79eb4ba8597611ce66eb2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: runsliceanim_0
+      name: runanim_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26f911b1f84ce0944b61732bc2b813b9
-      internalID: 1959420333
+      spriteID: 3cb33f552f226504e914ce2ed539157f
+      internalID: -919216226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runsliceanim_1
+      name: runanim_1
       rect:
         serializedVersion: 2
         x: 32
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 113804e36271cd44591133b6f24c7e69
-      internalID: 571059725
+      spriteID: 48656ccf7de669b46ac3b4b9764c2888
+      internalID: 1171125322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runsliceanim_2
+      name: runanim_2
       rect:
         serializedVersion: 2
         x: 64
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55c13bc81c0a23c4a946306a4044c354
-      internalID: 865903046
+      spriteID: 2f5019ef4ff72d4438b0b3efd487bbb5
+      internalID: -1799257300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runsliceanim_3
+      name: runanim_3
       rect:
         serializedVersion: 2
         x: 96
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1687ae5eff0804c4b83352e33c7f794d
-      internalID: -130507730
+      spriteID: 2aef49837e6a97045be81d8560f2152b
+      internalID: 694921882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runsliceanim_4
+      name: runanim_4
       rect:
         serializedVersion: 2
         x: 128
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5096f2ca0909cb4ea34912f52bcee1d
-      internalID: 824780554
+      spriteID: d66b56e85631d5a4aa71bd92f900d7e8
+      internalID: -1626622143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runsliceanim_5
+      name: runanim_5
       rect:
         serializedVersion: 2
         x: 160
@@ -242,8 +242,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9e214a0f39889469d7d22c0076cecb
-      internalID: -1370722156
+      spriteID: d6d5a9f6629493041ba7ae4a5e08494b
+      internalID: 746203343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runanim_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca542d7ac63d024b932bdabbee68eeb
+      internalID: -1543907932
       vertices: []
       indices: 
       edges: []
@@ -259,12 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      runsliceanim_0: 1959420333
-      runsliceanim_1: 571059725
-      runsliceanim_2: 865903046
-      runsliceanim_3: -130507730
-      runsliceanim_4: 824780554
-      runsliceanim_5: -1370722156
+      runanim_0: -919216226
+      runanim_1: 1171125322
+      runanim_2: -1799257300
+      runanim_3: 694921882
+      runanim_4: -1626622143
+      runanim_5: 746203343
+      runanim_6: -1543907932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
