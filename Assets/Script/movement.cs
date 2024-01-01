@@ -6,7 +6,7 @@ public class movement : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] float moveSpeed = 8f;
-    [SerializeField] float jumpForce = 3f;
+    [SerializeField] float jumpForce = 300f;
 
     public Vector2 boxSize = new Vector2(1, 0.2f);
     public float castDistance = 0.65f;
@@ -23,7 +23,7 @@ public class movement : MonoBehaviour
     private bool isFacingRight = true;
     Animator Anim;
 
-    [SerializeField] int jumpsLeft = 2;
+    bool doubleJump;
     
     void Start()
     {
@@ -36,19 +36,19 @@ public class movement : MonoBehaviour
     void Update()
     {
 
-        float movementInput = Input.GetAxisRaw("Horizontal");
+        float  horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        if(isTouchingWallL() && movementInput < 0)
+        if(isTouchingWallL() && horizontalInput < 0)
         {
-            movementInput = 0f;
+            horizontalInput = 0f;
         }
 
-        if (isTouchingWallR() && movementInput > 0)
+        if (isTouchingWallR() && horizontalInput > 0)
         {
-            movementInput = 0f;
+            horizontalInput = 0f;
         }
 
-        if (movementInput != 0)
+        if (horizontalInput != 0)
         {
             Anim.SetBool("Run", true);
         }
@@ -60,25 +60,18 @@ public class movement : MonoBehaviour
 
         Vector2 jump = new Vector2(0, jumpForce * 100);
 
-        transform.Translate(movementInput * Time.deltaTime * moveSpeed, 0, 0);
+        transform.Translate(horizontalInput * Time.deltaTime * moveSpeed, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded() || jumpsLeft > 0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-           
-            jumpsLeft--;
-            if(jumpsLeft == 0)
+           if(isGrounded() || doubleJump)
             {
-                Debug.Log("second jump!");
-                rb.AddForce(new Vector2(0, (jumpForce / 1.3f) * 100));
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+
+                doubleJump = !doubleJump;
             }
-            else
-            {
-                rb.AddForce(jump);
-            }
-            
-            
         }
-        if (movementInput > 0 && !isFacingRight || movementInput < 0 && isFacingRight)
+        if (horizontalInput > 0 && !isFacingRight || horizontalInput < 0 && isFacingRight)
         {
             Flip();
         }
@@ -88,7 +81,6 @@ public class movement : MonoBehaviour
     {
         if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
         {
-            jumpsLeft = 2;
             return true;
         }
         else
@@ -113,7 +105,7 @@ public class movement : MonoBehaviour
     {
         if (Physics2D.BoxCast(transform.position, boxSize2, 0, transform.right, castDistance2, groundLayer2))
         {
-
+            doubleJump = false;
             return true;
         }
         else
@@ -136,4 +128,6 @@ public class movement : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+
+    
 }
