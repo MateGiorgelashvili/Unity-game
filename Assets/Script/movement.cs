@@ -26,7 +26,7 @@ public class movement : MonoBehaviour
     Animator Anim;
 
     public bool doubleJump;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,9 +37,9 @@ public class movement : MonoBehaviour
     void Update()
     {
 
-        float  horizontalInput = Input.GetAxisRaw("Horizontal");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        if(isTouchingWallL() && horizontalInput < 0)
+        if (isTouchingWallL() && horizontalInput < 0)
         {
             horizontalInput = 0f;
         }
@@ -66,11 +66,11 @@ public class movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           if(isGrounded() || doubleJump)
+            if (isGrounded() || doubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
-                
+
                 if (doubleJump || !isGrounded())
                 {
                     CreateDust();
@@ -136,7 +136,16 @@ public class movement : MonoBehaviour
         transform.localScale = scale;
     }
 
-    void CreateDust(){
+    void CreateDust()
+    {
         dust.Play();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 6)
+        {
+            doubleJump = false;
+        }
     }
 }
