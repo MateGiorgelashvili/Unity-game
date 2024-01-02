@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     Rigidbody2D rb;
     [SerializeField] float moveSpeed = 8f;
     [SerializeField] float jumpForce = 300f;
@@ -68,6 +70,11 @@ public class movement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
+                if (doubleJump)
+                {
+                    CreateDust();
+                }
+
                 doubleJump = !doubleJump;
             }
         }
@@ -127,6 +134,10 @@ public class movement : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    void CreateDust(){
+        dust.Play();
     }
 
     
