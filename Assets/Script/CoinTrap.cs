@@ -15,7 +15,7 @@ public class CoinTrap : MonoBehaviour
         if (other.CompareTag("Coin"))
         {
             Anim.Play("death");
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
