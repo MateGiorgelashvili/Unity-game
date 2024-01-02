@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-
+    private bool isFirst = true;
     AudioSource audioSource;
     void Update()
     {
@@ -14,7 +14,12 @@ public class Sound : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        kaichemo();
+        if (isFirst)
+        {
+            kaichemo();
+            isFirst = false;
+        }
+        
     }
 
     void kaichemo()
