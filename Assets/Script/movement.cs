@@ -25,7 +25,7 @@ public class movement : MonoBehaviour
     private bool isFacingRight = true;
     Animator Anim;
 
-    bool doubleJump;
+    public bool doubleJump;
     
     void Start()
     {
@@ -34,7 +34,6 @@ public class movement : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -64,17 +63,18 @@ public class movement : MonoBehaviour
 
         transform.Translate(horizontalInput * Time.deltaTime * moveSpeed, 0, 0);
 
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
            if(isGrounded() || doubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
-                if (doubleJump)
+                
+                if (doubleJump || !isGrounded())
                 {
                     CreateDust();
                 }
-
                 doubleJump = !doubleJump;
             }
         }
@@ -139,6 +139,4 @@ public class movement : MonoBehaviour
     void CreateDust(){
         dust.Play();
     }
-
-    
 }
