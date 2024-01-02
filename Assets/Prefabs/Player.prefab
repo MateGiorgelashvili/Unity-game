@@ -122,10 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f1551df01871c4d9988a03b2f8dcbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dust: {fileID: 0}
   moveSpeed: 8
   jumpForce: 2.5
   boxSize: {x: 1, y: 0.2}
-  castDistance: 0.65
+  castDistance: 0.78
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -139,7 +140,7 @@ MonoBehaviour:
   groundLayer2:
     serializedVersion: 2
     m_Bits: 128
-  jumpsLeft: 2
+  doubleJump: 0
 --- !u!50 &4130061686606683902
 Rigidbody2D:
   serializedVersion: 4
@@ -256,4 +257,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b983b5e85cdaee8479b845f83bafc8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Anim: {fileID: 0}
