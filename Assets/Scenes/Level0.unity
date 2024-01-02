@@ -2408,8 +2408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6414fdb640bbbb14fa8e1215b0a4b58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trap1: {fileID: 0}
-  snowDisapear: {fileID: 0}
+  trap1: {fileID: 1631014715}
+  snowDisapear: {fileID: 1910108112}
 --- !u!61 &300101183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9011,7 +9011,7 @@ Transform:
   m_GameObject: {fileID: 642489287}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.77, y: 5.6663756, z: 6.4259872}
+  m_LocalPosition: {x: 15.49, y: 5.6663756, z: 6.4259872}
   m_LocalScale: {x: 0.5375, y: 11.213, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
