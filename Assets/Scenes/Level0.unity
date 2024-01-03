@@ -15710,7 +15710,7 @@ GameObject:
   - component: {fileID: 1631014718}
   - component: {fileID: 1631014717}
   - component: {fileID: 1631014719}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: fallpoint
   m_TagString: Ground
   m_Icon: {fileID: 0}
