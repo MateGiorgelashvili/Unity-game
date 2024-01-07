@@ -148,4 +148,9 @@ public class movement : MonoBehaviour
             doubleJump = false;
         }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        doubleJump = true;
+    }
 }
